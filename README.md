@@ -44,6 +44,7 @@ use regression_test::RegTest;
 
 // Note: you must have the first argument of the function be a `RegTest` instance
 #[regtest]
+#[test]
 fn my_test(mut rt: RegTest) {
     let result = 2 + 2; // complex calculation
 

@@ -1,6 +1,6 @@
 [package]
 name = "regression-test-macros"
-version = "0.2.0"
+version = "0.2.1"
 edition = "2024"
 authors = ["eva-cosma"]
 description = "Helper macros for the regression-test library"
@@ -16,5 +16,5 @@ proc-macro = true
 
 [dependencies]
 quote = "1.0.40"
-regression-test = { path = "../regression-test", version= "0.2.0" }
+regression-test = { path = "../regression-test", version= "0.2.1" }
 syn = { version = "2.0.104", features = ["full"] }
