@@ -1,11 +1,11 @@
 [package]
 name = "regression-test-macros"
-version = "0.1.0"
+version = "0.2.0"
 edition = "2024"
-authors = ["george-cosma"]
+authors = ["eva-cosma"]
 description = "Helper macros for the regression-test library"
 license = "MIT"
-repository = "https://github.com/george-cosma/regression-test"
+repository = "https://github.com/eva-cosma/regression-test"
 readme = "../README.md"
 keywords = ["regression", "testing", "macros"]
 categories = ["development-tools", "development-tools::testing"]
@@ -16,5 +16,5 @@ proc-macro = true
 
 [dependencies]
 quote = "1.0.40"
-regression-test = { path = "../regression-test", version= "0.1.0" }
+regression-test = { path = "../regression-test", version= "0.2.0" }
 syn = { version = "2.0.104", features = ["full"] }

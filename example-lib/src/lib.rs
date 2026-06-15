@@ -18,6 +18,7 @@ mod tests {
     use super::*;
 
     #[regtest]
+    #[test]
     fn it_works(mut r: RegTest) {
         let result = add(2, 2);
         assert_eq!(result, 4);
@@ -25,6 +26,7 @@ mod tests {
     }
 
     #[regtest]
+    #[test]
     fn random_number_test(mut r: RegTest) {
         let result = random_number();
         assert!(result < 100);

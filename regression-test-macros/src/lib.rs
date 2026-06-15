@@ -17,7 +17,8 @@
 //! use regression_test::RegTest;
 //!
 //! #[regtest]
-//! fn my_regression_test(rt: RegTest) {
+//! #[test]
+//! fn my_regression_test(mut rt: RegTest) {
 //!     // Test logic here
 //!     rt.regtest("some output");
 //!     rt.regtest_dbg(vec![1, 2, 3]);
@@ -45,7 +46,8 @@ use syn::{ItemFn, parse_macro_input};
 /// use regression_test_macros::regtest;
 ///
 /// #[regtest]
-/// fn my_test(rt: RegTest) {
+/// #[test]
+/// fn my_test(mut rt: RegTest) {
 ///     // Test logic
 ///     rt.regtest("some output");
 ///     rt.regtest_dbg(vec![1, 2, 3]);
@@ -204,7 +206,6 @@ pub fn regtest(_attr: TokenStream, item: TokenStream) -> TokenStream {
     };
 
     let fn_quote = quote! {
-        #[test]
         #(#fn_attrs)*
         #fn_vis #fn_async fn #fn_name() {
             #regtest_path_quote

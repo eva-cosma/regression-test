@@ -9,6 +9,7 @@ mod tests {
     use super::*;
 
     #[regtest]
+    #[test]
     fn it_subtracts_correctly(mut r: RegTest) {
         let result = subtract(5, 3);
         assert_eq!(result, 2);
